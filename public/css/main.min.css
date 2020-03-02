@@ -5675,8 +5675,9 @@ strong {
 }
 
 .product-menu__item.active .product-menu__link, .product-menu__link:active, .product-menu__link:focus {
-    background: #c33;
-    color: #fff
+    background: #fff;
+    border: 2px solid #fc0;
+    color: #f00;
 }
 
 .product-menu__link:hover {
@@ -7542,3 +7543,6 @@ strong {
     width: 200px;
 }
 
+.page-image {
+    width: 50%;
+}

@@ -12,9 +12,8 @@
 */
 
 Route::get('', 'HomeController@index')->name('home');
-Route::get('/menu', 'HomeController@menu')->name('menu');
-Route::get('/delivery', 'HomeController@delivery')->name('delivery');
-Route::get('/action', 'HomeController@action')->name('action');
+Route::get('/menu/{slug}', 'HomeController@menu' )->name('menu');
+Route::get('/page/{slug}', 'HomeController@page')->name('page');
 Route::get('/contact', 'HomeController@contact')->name('contact');
 
 Route::group(['prefix' => 'admin'], function () {

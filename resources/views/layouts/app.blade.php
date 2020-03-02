@@ -8,7 +8,9 @@
     <link href="{{asset('css/main.min.css')}}" rel="stylesheet" type="text/css">
     <link href="{{asset('css/style-x.css')}}" rel="stylesheet" type="text/css">
     <meta name="theme-color" content="#ffcc00">
-    <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500&display=swap&subset=cyrillic" rel="stylesheet"></head>
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500&display=swap&subset=cyrillic"
+          rel="stylesheet">
+</head>
 <body class="page page_index">
 @extends('layouts.header')
 @yield('content')
@@ -26,5 +28,19 @@
 <script src="/js/separate-js/jquery.colorbox-min.js"></script>
 <script src="/js/main.min.js"></script>
 <script src="/js/app.js"></script>
+<script>
+    $(document).ready(function () {
+        var status = 0;
+        $('.burger-btn').on('click', function () {
+            if (status == 0) {
+                $('#header__menu_mobile').addClass('header__mobile_open')
+                status = 1
+            } else if (status == 1) {
+                $('#header__menu_mobile').removeClass('header__mobile_open')
+                status = 0
+            }
+        });
+    });
+</script>
 </body>
 </html>

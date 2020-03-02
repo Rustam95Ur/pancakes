@@ -7,20 +7,25 @@
         <div class="header__menu">
             <nav class="menu menu_header menu_top">
                 <ul class="menu__list">
-                    <li class="menu__item">
-                        <a class="menu__link" href="{{route('menu')}}"><span class="menu__link-block"
-                                                                       data-hover="{{trans('header.menu')}}">{{trans('header.menu')}}</span></a>
+                    <li class="menu__item {{Request::route()->getName() == 'menu'  ? 'active' : null }}">
+                        <a class="menu__link " href="{{route('menu', 'pancake')}}">
+                            <span class="menu__link-block" data-hover="{{trans('header.menu')}}">{{trans('header.menu')}}</span>
+                        </a>
                     </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="{{route('delivery')}}"><span class="menu__link-block"
-                                                                     data-hover="{{trans('header.payment')}}">{{trans('header.payment')}}</span></a>
+                    <li class="menu__item {{Request::is('page/delivery')  ? 'active' : null }}">
+                        <a class="menu__link" href="{{route('page','delivery')}}">
+                            <span class="menu__link-block" data-hover="{{trans('header.payment')}}">{{trans('header.payment')}}</span>
+                        </a>
                     </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="{{{route('action')}}}"><span class="menu__link-block"
-                                                                    data-hover="{{trans('header.action')}}">{{trans('header.action')}}</span></a>
+                    <li class="menu__item {{Request::is('page/action')  ? 'active' : null }}">
+                        <a class="menu__link" href="{{{route('page','action')}}}">
+                            <span class="menu__link-block" data-hover="{{trans('header.action')}}">{{trans('header.action')}}</span>
+                        </a>
                     </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="{{route('contact')}}"><span class="menu__link-block" data-hover="{{trans('header.contact')}}">{{trans('header.contact')}}</span></a>
+                    <li class="menu__item {{Request::route()->getName() == 'contact'  ? 'active' : null }}">
+                        <a class="menu__link" href="{{route('contact')}}">
+                            <span class="menu__link-block" data-hover="{{trans('header.contact')}}">{{trans('header.contact')}}</span>
+                        </a>
                     </li>
                 </ul>
             </nav>
@@ -36,33 +41,29 @@
                     class="basket-mini__cost js--basket-header__count" style="display: none;">0</span></a>
         </div>
         <div class="header__mobile-btn">
-            <div class="burger-btn" data-toggle="collapse" data-target=".header__menu-block">
+            <div class="burger-btn" data-toggle="collapse" data-target="#header__menu_mobile">
                 <span class="burger-btn__line burger-btn__line_top"></span> <span
                     class="burger-btn__line burger-btn__line_middle"></span> <span
                     class="burger-btn__line burger-btn__line_bottom"></span>
             </div>
         </div>
-        <div class="header__mobile">
+        <div class="header__mobile" id="header__menu_mobile">
             <nav class="menu menu_header menu_mobile">
                 <ul class="menu__list">
                     <li class="menu__item">
-                        <a class="menu__link" href="/menu/bliny"><span class="menu__link-block"
-                                                                       data-hover="Меню">Меню</span></a>
+                        <a class="menu__link" href="{{route('menu', 'pancake')}}"><span class="menu__link-block"
+                                                                       data-hover="{{trans('header.menu')}}">{{trans('header.menu')}}</span></a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href="/delivery"><span class="menu__link-block"
-                                                                     data-hover="Доставка и оплата">Доставка и оплата</span></a>
+                        <a class="menu__link" href="{{route('page', 'delivery')}}"><span class="menu__link-block"
+                                                                     data-hover="{{trans('header.payment')}}">{{trans('header.payment')}}</span></a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href="/bonuses"><span class="menu__link-block"
-                                                                    data-hover="Акции">Акции</span></a>
+                        <a class="menu__link" href="{{route('page', 'action')}}"><span class="menu__link-block"
+                                                                    data-hover="{{trans('header.action')}}">{{trans('header.action')}}</span></a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href="/cafes"><span class="menu__link-block"
-                                                                  data-hover="Блинные">Блинные</span></a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="/hotline"><span class="menu__link-block" data-hover="Горячая линия">Горячая линия</span></a>
+                        <a class="menu__link" href="{{route('contact')}}"><span class="menu__link-block" data-hover="{{trans('header.contact')}}">{{trans('header.contact')}}</span></a>
                     </li>
                 </ul>
             </nav>
