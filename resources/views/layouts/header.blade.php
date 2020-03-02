@@ -1,45 +1,71 @@
-<!-- Start Header Area -->
-<header class="htc__header bg--white">
-    <!-- Start Mainmenu Area -->
-    <div id="sticky-header-with-topbar" class="mainmenu__wrap sticky__header">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-2 col-sm-4 col-md-6 order-1 order-lg-1">
-                    <div class="logo">
-                        <a href="{{route('home')}}">
-                            <img src="{{asset('images/logo/logo-1.png')}}" alt="logo images">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-9 col-sm-4 col-md-2 order-3 order-lg-2">
-                    <div class="main__menu__wrap">
-                        <nav class="main__menu__nav d-none d-lg-block">
-                            <ul class="mainmenu">
-                                <li><a href="{{route('home')}}">{{trans('header.home')}}</a></li>
-                                <li><a href="{{route('payment')}}">{{trans('header.payment')}}</a></li>
-                                <li><a href="{{route('action')}}">{{trans('header.action')}}</a></li>
-                                <li><a href="{{route('contact')}}">{{trans('header.contact')}}</a></li>
-                            </ul>
-                        </nav>
-
-                    </div>
-                </div>
-                <div class="col-lg-1 col-sm-4 col-md-4 order-2 order-lg-3">
-                    <div class="header__right d-flex justify-content-end">
-                        <div class="shopping__cart">
-                            <a class="minicart-trigger" href="#"><i class="zmdi zmdi-shopping-basket"></i></a>
-                            <div class="shop__qun">
-                                <span>0</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<header class="header">
+    <div class="header__wrapper">
+        <div class="header__logo">
+            <a class="logo" href="{{route('home')}}"><span class="logo__img logo__img_pancake"></span></a>
+        </div>
+        <div class="spacer"></div>
+        <div class="header__menu">
+            <nav class="menu menu_header menu_top">
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a class="menu__link" href="{{route('menu')}}"><span class="menu__link-block"
+                                                                       data-hover="{{trans('header.menu')}}">{{trans('header.menu')}}</span></a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="{{route('delivery')}}"><span class="menu__link-block"
+                                                                     data-hover="{{trans('header.payment')}}">{{trans('header.payment')}}</span></a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="{{{route('action')}}}"><span class="menu__link-block"
+                                                                    data-hover="{{trans('header.action')}}">{{trans('header.action')}}</span></a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="{{route('contact')}}"><span class="menu__link-block" data-hover="{{trans('header.contact')}}">{{trans('header.contact')}}</span></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="spacer"></div>
+        <div class="header__tel"></div>
+        <div class="header__basket">
+            <a class="basket-mini" href="/basket"><span class="basket-mini__wrapper"><span class="basket-mini__icon"><svg
+                            class="basket-mini__svg icon_basket" width="24" height="21">
+        <use xlink:href="/images/assets/svg-symbols.svg#basket"></use></svg></span> <span class="basket-mini__hover"><svg
+                            class="basket-mini__svg icon_basket" width="24" height="21">
+        <use xlink:href="/images/assets/svg-symbols.svg#basket"></use></svg></span></span> <span
+                    class="basket-mini__cost js--basket-header__count" style="display: none;">0</span></a>
+        </div>
+        <div class="header__mobile-btn">
+            <div class="burger-btn" data-toggle="collapse" data-target=".header__menu-block">
+                <span class="burger-btn__line burger-btn__line_top"></span> <span
+                    class="burger-btn__line burger-btn__line_middle"></span> <span
+                    class="burger-btn__line burger-btn__line_bottom"></span>
             </div>
-            <!-- Mobile Menu -->
-            <div class="mobile-menu d-block d-lg-none"></div>
-            <!-- Mobile Menu -->
+        </div>
+        <div class="header__mobile">
+            <nav class="menu menu_header menu_mobile">
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a class="menu__link" href="/menu/bliny"><span class="menu__link-block"
+                                                                       data-hover="Меню">Меню</span></a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="/delivery"><span class="menu__link-block"
+                                                                     data-hover="Доставка и оплата">Доставка и оплата</span></a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="/bonuses"><span class="menu__link-block"
+                                                                    data-hover="Акции">Акции</span></a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="/cafes"><span class="menu__link-block"
+                                                                  data-hover="Блинные">Блинные</span></a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="/hotline"><span class="menu__link-block" data-hover="Горячая линия">Горячая линия</span></a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </div>
-    <!-- End Mainmenu Area -->
 </header>
-<!-- End Header Area -->

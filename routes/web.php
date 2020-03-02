@@ -12,7 +12,8 @@
 */
 
 Route::get('', 'HomeController@index')->name('home');
-Route::get('/payment', 'HomeController@payment')->name('payment');
+Route::get('/menu', 'HomeController@menu')->name('menu');
+Route::get('/delivery', 'HomeController@delivery')->name('delivery');
 Route::get('/action', 'HomeController@action')->name('action');
 Route::get('/contact', 'HomeController@contact')->name('contact');
 

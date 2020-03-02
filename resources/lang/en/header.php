@@ -3,6 +3,7 @@
 return [
     'home'              => 'Home',
     'payment'           => 'Payment and Shipping',
-    'action'            => 'Action',
+    'action'            => 'Stocks',
+    'menu'              => 'Menu',
     'contact'           => 'Contact',
 ];
