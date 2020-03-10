@@ -2856,8 +2856,8 @@ strong {
 }
 
 .basket-mini:active .basket-mini__wrapper {
-    background: #c00;
-    border-color: #c00
+    background: #44a643;
+    border-color: #44a643
 }
 
 .basket-mini_yellow .basket-mini__wrapper {
@@ -5138,7 +5138,7 @@ strong {
 
 .map-address, .menu__link {
     font-size: 1rem;
-    color: #000
+    color: #fff
 }
 
 .map-address {
@@ -5310,7 +5310,7 @@ strong {
     padding: 5px 0;
     display: block;
     content: attr(data-hover);
-    color: #c00
+    color: #000
 }
 
 .product-menu__link, .product-unit, .row_rel, .section_bg-pattern {
@@ -5543,7 +5543,7 @@ strong {
     font-size: 16px;
     line-height: 1.62;
     cursor: default;
-    color: #000;
+    color: #fff;
     background: #cb2b33
 }
 
