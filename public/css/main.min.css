@@ -5544,7 +5544,9 @@ strong {
     line-height: 1.62;
     cursor: default;
     color: #fff;
-    background: #cb2b33
+    background-image: url(/images/rainbow.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .page-error__info, .page-error__info a {
