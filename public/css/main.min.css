@@ -7552,3 +7552,6 @@ strong {
 .page-image {
     width: 50%;
 }
+.text-dark {
+    color: black !important;
+}

@@ -50,7 +50,7 @@
             <section class="recommendation">
                 <div class="recommendation__header row">
                     <div class="col-12 col-sm-12 text-center">
-                        <div class="recommendation__title">
+                        <div class="recommendation__title text-dark">
                             {{trans('page.home.new')}}
                         </div>
                     </div>
