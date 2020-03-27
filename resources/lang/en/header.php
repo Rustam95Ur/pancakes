@@ -6,4 +6,6 @@ return [
     'action'            => 'Stocks',
     'menu'              => 'Menu',
     'contact'           => 'Contact',
+    'reviews'           => 'Reviews',
+    'about'             => 'About us'
 ];

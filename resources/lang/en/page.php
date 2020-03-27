@@ -2,7 +2,9 @@
 
 return [
     'home'      => [
-        'new'   => 'New dishes'
+        'new'   => 'New Dishes',
+        'reviews' => 'Reviews',
+        'contact' => 'Contact'
         ],
 
 ];

@@ -21,7 +21,6 @@ class CreateProductsTable extends Migration
             $table->text('description');
             $table->integer('price');
             $table->string('image');
-            $table->string('weight');
             $table->enum('status', Product::$statuses)->default(Product::STATUS_ACTIVE);
             $table->timestamps();
         });
