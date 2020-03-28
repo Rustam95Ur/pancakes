@@ -16,6 +16,7 @@
 <body class="page page_index">
 @extends('layouts.header')
 @yield('content')
+@extends('layouts.footer')
 @extends('layouts.modal')
 {{--@extends('layouts.footer')--}}
 <div class="toper">

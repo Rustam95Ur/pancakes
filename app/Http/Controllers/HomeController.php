@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Comment;
 use App\Models\Product;
 use App\Http\Requests\StoreCommentRequest;
+use TCG\Voyager\Models\Page;
 
 class HomeController extends Controller
 {
@@ -14,10 +15,12 @@ class HomeController extends Controller
     public function index()
     {
         $comments = Comment::all();
+        $about = Page::where('slug', '=', 'about')->first();
         $products = Product::where('status', '=', Product::STATUS_ACTIVE)->orderBy('id', 'DESC')->limit(12)->get();
         return view('home.index', [
             'products' => $products,
-            'comments' => $comments
+            'comments' => $comments,
+            'about' => $about
         ]);
     }
 

@@ -3950,14 +3950,8 @@ strong {
 .footer__wrapper {
     margin: 0 auto;
     padding: 35px 25px 35px 10px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 100%;
-    max-width: 1920px;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center
+    align-items: center;
 }
 
 @media only screen and (min-width: 991px) and (max-width: 1199px) {
@@ -4037,6 +4031,10 @@ strong {
     .form-callback {
         min-width: 300px;
         padding: 20px
+    }
+    .container_bg {
+        background-size: 100%;
+        background-repeat: no-repeat;
     }
 }
 
@@ -7653,4 +7651,13 @@ label {
 .grid-item {
     margin-right: 20px;
     margin-left: 20px;
+}
+.social-footer-icon {
+    font-size: 60px;
+    margin-bottom: 0;
+
+
+}
+.social-footer-icon i {
+    color: white;
 }
